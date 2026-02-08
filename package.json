@@ -1,0 +1,43 @@
+{
+  "name": "playwright-jira-guard",
+  "version": "1.0.0",
+  "description": "Automatically skip Playwright tests if a linked Jira issue is still open",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "playwright",
+    "jira",
+    "test",
+    "skip",
+    "automation",
+    "testing"
+  ],
+  "author": "",
+  "license": "MIT",
+  "peerDependencies": {
+    "@playwright/test": ">=1.20.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.48.0",
+    "@types/node": "^22.10.2",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
