@@ -6,3 +6,4 @@ dist/
 *.tgz
 coverage/
 .env
+.test-*.json

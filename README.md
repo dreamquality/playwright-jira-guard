@@ -1,5 +1,9 @@
 # playwright-jira-guard
 
+[![CI](https://github.com/dreamquality/playwright-jira-guard/actions/workflows/ci.yml/badge.svg)](https://github.com/dreamquality/playwright-jira-guard/actions/workflows/ci.yml)
+[![npm version](https://badge.fury.io/js/playwright-jira-guard.svg)](https://www.npmjs.com/package/playwright-jira-guard)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 Automatically skip Playwright tests if a linked Jira issue is still open. This package uses a **Pre-fetch & Cache** strategy to avoid making HTTP requests during individual test execution, ensuring optimal performance.
 
 ## Features
@@ -10,6 +14,7 @@ Automatically skip Playwright tests if a linked Jira issue is still open. This p
 - 🛡️ **Graceful Degradation**: Tests run normally if Jira is unavailable
 - 🔧 **Flexible Configuration**: Environment variables or config object
 - 📝 **TypeScript Support**: Fully typed with TypeScript definitions
+- ✅ **Well Tested**: Comprehensive test suite with 100% coverage goal
 
 ## Installation
 
@@ -237,6 +242,98 @@ Set environment variables in your CI/CD pipeline:
 
 MIT
 
+## Development
+
+### Setup
+
+```bash
+# Clone the repository
+git clone https://github.com/dreamquality/playwright-jira-guard.git
+cd playwright-jira-guard
+
+# Install dependencies
+npm install
+
+# Run tests
+npm test
+
+# Run tests in watch mode
+npm run test:watch
+
+# Build the package
+npm run build
+```
+
+### Running Tests
+
+The project uses Vitest for testing:
+
+```bash
+# Run tests once
+npm test
+
+# Run tests with coverage
+npm run test:coverage
+
+# Run tests in watch mode
+npm run test:watch
+
+# Run tests with UI
+npm run test:ui
+```
+
+### Project Structure
+
+```
+playwright-jira-guard/
+├── src/
+│   ├── types.ts           # TypeScript interfaces
+│   ├── jira-api.ts        # Jira API integration
+│   ├── global-setup.ts    # Playwright global setup
+│   └── index.ts           # Main exports
+├── tests/
+│   ├── jira-api.test.ts           # Jira API tests
+│   ├── global-setup.test.ts       # Global setup tests
+│   ├── skip-if-jira-open.test.ts  # Skip function tests
+│   └── integration.test.ts        # Integration tests
+├── examples/              # Usage examples
+└── .github/workflows/     # CI/CD workflows
+```
+
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
+
+### Guidelines
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Make your changes
+4. Add tests for your changes
+5. Ensure all tests pass (`npm test`)
+6. Commit your changes (`git commit -m 'Add amazing feature'`)
+7. Push to the branch (`git push origin feature/amazing-feature`)
+8. Open a Pull Request
+
+### Reporting Issues
+
+If you find a bug or have a feature request, please create an issue on GitHub with:
+- A clear description of the issue
+- Steps to reproduce (for bugs)
+- Expected vs actual behavior
+- Your environment (Node.js version, OS, etc.)
+
+## CI/CD
+
+This project uses GitHub Actions for continuous integration and deployment:
+
+- **CI Workflow**: Runs tests on Node.js 18.x, 20.x, and 22.x
+- **Publish Workflow**: Automatically publishes to NPM on releases
+- **Release Workflow**: Automates version bumping and changelog updates
+
+## Support
+
+For questions and support, please:
+- Check the [documentation](https://github.com/dreamquality/playwright-jira-guard#readme)
+- Search [existing issues](https://github.com/dreamquality/playwright-jira-guard/issues)
+- Create a [new issue](https://github.com/dreamquality/playwright-jira-guard/issues/new) if needed

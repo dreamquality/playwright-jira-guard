@@ -5,6 +5,22 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Added
+- Comprehensive test suite with Vitest
+  - Unit tests for Jira API integration
+  - Unit tests for global setup function
+  - Unit tests for skipIfJiraOpen function
+  - Integration tests for module exports
+- GitHub Actions CI/CD workflows
+  - CI workflow for automated testing on Node.js 18.x, 20.x, 22.x
+  - Publish workflow for automated NPM publishing
+  - Release workflow for version management
+- CONTRIBUTING.md with development guidelines
+- Test coverage reporting
+- Development documentation in README
+
 ## [1.0.0] - 2026-02-08
 
 ### Added
